@@ -101,7 +101,7 @@ a {
     position: relative;
     text-align: center;
     background-color: #54BAB9;
-    height: 500px;
+    height: 100%;
     margin: 0%;
 }
 
@@ -148,14 +148,14 @@ a {
     display: inline-block;
     position: relative;
     top: 220px;
-    right: 300px;
+    right: 20%;
 }
 
 .working {
     display: inline-block;
     position: relative;
     top: 220px;
-    right: 250px;
+    right: 15%;
 }
 
 
