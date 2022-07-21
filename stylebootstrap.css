@@ -1,0 +1,246 @@
+                            body {
+                                font-family: 'Montserrat', sans-serif;
+                                line-height: 1.5rem;
+                                margin: 0%;
+                            }
+                            
+                            #title {
+                                background-color: #ff4c68;
+                            }
+                            
+                            .title-container-fluid {
+                                padding: 3% 15% 7%;
+                                line-height: 3rem;
+                            }
+                            
+                            .navbar {
+                                color: #ffffff;
+                            }
+                            
+                            .holify {
+                                font-family: 'Ubuntu', sans-serif;
+                                font-size: 2rem;
+                                line-height: 3rem;
+                                font-weight: bold;
+                                margin-bottom: 2rem;
+                            }
+                            
+                            h1 {
+                                color: #fff;
+                                line-height: 4rem;
+                                font-weight: bold;
+                                font-size: 3.5rem;
+                            }
+                            
+                            .button-download {
+                                margin-right: 0.33rem;
+                                margin-top: 1rem;
+                            }
+                            
+                            .navbar-nav {
+                                margin-left: 40px;
+                                margin-bottom: 3rem;
+                            }
+                            
+                            .image-iphone {
+                                width: 13rem;
+                                height: 26rem;
+                                margin-left: 8rem;
+                                margin-top: 2.5rem;
+                                transform: rotate(20deg);
+                                -webkit-transform: rotate(20deg);
+                                -moz-transform: rotate(20deg);
+                                -ms-transform: rotate(20deg);
+                                -o-transform: rotate(20deg);
+                                position: absolute;
+                                z-index: 0;
+                            }
+                            
+                            .nav-item {
+                                padding: 0 18px;
+                            }
+                            
+                            .nav-link {
+                                font-family: "Montserrat";
+                            }
+                            /* section 2 Features rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*/
+                            
+                            #features {
+                                background-color: #fff;
+                                padding: 3rem 0;
+                                position: relative;
+                                z-index: 1;
+                            }
+                            
+                            .features-row-element {
+                                text-align: center;
+                                padding: 2rem 0;
+                            }
+                            
+                            .correct-icon {
+                                color: #ef8172;
+                            }
+                            /* .circle-o {
+    color: #ef8172;
+} */
+                            
+                            .heart {
+                                color: #ef8172;
+                            }
+                            /* rrrrrrrrrrrr testimonials   rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+                            
+                            #testimonials {
+                                background-color: #ef8172;
+                                text-align: center;
+                            }
+                            
+                            .carousel-item {
+                                padding: 3rem 10rem;
+                            }
+                            
+                            .testimonials-images {
+                                border-radius: 100%;
+                                -webkit-border-radius: 100%;
+                                -moz-border-radius: 100%;
+                                -ms-border-radius: 100%;
+                                -o-border-radius: 100%;
+                                width: 20%;
+                            }
+                            
+                            #press {
+                                background-color: #ef8172;
+                                padding: 0rem 1.5rem 1.5rem;
+                                text-align: center;
+                            }
+                            
+                            .press-images {
+                                width: 20%;
+                                text-align: center;
+                                margin: 1.5rem 1rem;
+                            }
+                            /* pricing rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+                            
+                            #pricing {
+                                background-color: #fff;
+                                text-align: center;
+                                padding: 2rem 2rem;
+                            }
+                            
+                            .pricing-h2 {
+                                color: #ff4c68;
+                                font-weight: bold;
+                                font-size: 3rem;
+                                font-family: 'Montserrat', sans-serif;
+                                line-height: 3rem;
+                                text-align: center;
+                            }
+                            
+                            .pricing-p {
+                                font-weight: bold;
+                                font-size: medium;
+                            }
+                            
+                            .card {
+                                margin: 2rem 2rem;
+                                text-align: center;
+                            }
+                            
+                            .card1 {
+                                height: 22rem;
+                            }
+                            
+                            .card-btn1 {
+                                margin-top: 2.3rem;
+                            }
+                            
+                            .card2 {
+                                height: 22rem;
+                            }
+                            
+                            .card-btn2 {
+                                margin-top: 2.3rem;
+                            }
+                            
+                            .card3 {
+                                height: 22rem;
+                            }
+                            /*rrrrrr section 4 call to action  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*/
+                            
+                            #cta {
+                                background-color: #ff4c68;
+                                text-align: center;
+                            }
+                            
+                            .cta-div {
+                                padding: 4rem 16rem;
+                            }
+                            
+                            .cta-h1 {
+                                color: #fff;
+                                font-weight: bold;
+                                font-size: 3rem;
+                                font-family: 'Montserrat', sans-serif;
+                                line-height: 3rem;
+                                text-align: center;
+                            }
+                            
+                            .cta-btn {
+                                margin: 2rem 0.3rem 0rem;
+                            }
+                            /* rrrrrrrrrrrr section-5  footer rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+                            
+                            #footer {
+                                background-color: #fff;
+                                text-align: center;
+                                padding: 5rem 5rem;
+                            }
+                            
+                            .footer-icons {
+                                padding: 0 0.6rem;
+                            }
+                            
+                            .footer-p {
+                                font-size: medium;
+                                padding: 1rem 0;
+                            }
+                            /* media queris rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr/ */
+                            
+                            @media (max-width:991px) {
+                                .title-container-fluid {
+                                    text-align: center;
+                                }
+                                .image-iphone {
+                                    position: static;
+                                    margin-left: 0%;
+                                    transform: rotate(0);
+                                    -webkit-transform: rotate(0);
+                                    -moz-transform: rotate(0);
+                                    -ms-transform: rotate(0);
+                                    -o-transform: rotate(0);
+                                }
+                                .testimonials-images {
+                                    padding: 0% 50;
+                                }
+                                .pricing-p {
+                                    padding: 0 4rem;
+                                }
+                                .cta-div {
+                                    padding-left: 0.8rem;
+                                    padding-right: 0.8rem;
+                                }
+                                .cta-h1 {
+                                    font-weight: 600;
+                                    font-size: 2rem;
+                                    line-height: 2rem;
+                                }
+                                #press {
+                                    padding: 0rem 0rem;
+                                }
+                                .press-images {
+                                    padding: 1rem 0.5rem;
+                                    margin: 1rem 0rem;
+                                }
+                                .carousel-item {
+                                    padding: 2rem 3rem;
+                                }
+                            }
