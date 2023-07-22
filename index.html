@@ -88,6 +88,24 @@
             border-left: 1px solid black;
             padding: 3px;
         }
+
+        /* Responsive styles for smaller screens (e.g., phones) */
+        @media only screen and (max-width: 600px) {
+            .nav {
+                flex-wrap: wrap; /* Allow items to wrap onto new lines */
+            }
+          
+            .nav-left-1st,
+            .nav-right {
+                display: none; /* Hide the left and right elements on smaller screens */
+            }
+          
+            .nav-mid {
+                flex-basis: 100%; /* Take full width on smaller screens */
+                margin-bottom: 10px; /* Add some spacing between mid and bottom elements */
+            }
+        }
+
     </style>
 </head>
 
@@ -95,50 +113,31 @@
     <!-- Navbar start  -->
     <nav class="nav div-flex">
         <div class="nav-left div-flex">
-
             <div class="nav-left-1st">
                 <a href="#"><i class=" top-icons fa-solid fa-bars"></i></a>
             </div>
             <div class="nav-left-2nd div-flex">
                 <a href=""><i class="logo top-icons fa-brands fa-youtube"></i></a>
-                <a href="">
-                    <h3 class="heading">Youtube</h3>
-                </a>
+                <a href=""><h3 class="heading">Youtube</h3></a>
             </div>
-
         </div>
         <div class="nav-mid div-flex">
             <div class="mid-1st-div div-flex">
                 <div class="search-input-div div-flex">
                     <input type="text" name="search" id="search-box">
-
                 </div>
                 <div class="search-icon-div">
                     <a href=""><i class="top-icons fa fa-search" aria-hidden="true"></i></a>
-
                 </div>
             </div>
-
-
             <div class="mic-div div-flex">
                 <a href=""><i class="top-icons fa-solid fa-microphone"></i></a>
             </div>
-
         </div>
         <div class="nav-right div-flex">
-            <a href="">
-                <i class="top-icons fa-solid fa-video"></i>
-
-            </a>
-            <a href="">
-                <i class="top-icons fa-solid fa-bell"></i>
-
-            </a>
-            <a href="">
-
-                <i class="top-icons fa-solid fa-user"></i>
-
-            </a>
+            <a href=""><i class="top-icons fa-solid fa-video"></i></a>
+            <a href=""><i class="top-icons fa-solid fa-bell"></i></a>
+            <a href=""><i class="top-icons fa-solid fa-user"></i></a>
         </div>
     </nav>
 </body>
