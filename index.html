@@ -3,147 +3,144 @@
 
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Youtube Clone</title>
-    <!--fontAwesome cdn link included-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-XXXXXX" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/1b26aa43df.js" crossorigin="anonymous"></script>
-    <!--Css file include-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Home Page</title>
+    <!-- adding material icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- adding font awesome js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- adding css file -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- internal css -->
     <style>
-        html,
-        body {
-            background: #ffffff;
+        * {
             padding: 0;
             margin: 0;
-            width: 100vw;
-            height: 100vh;
+            font-family: sans-serif, serif;
         }
         
-        #top {
+        a {
+            text-decoration: none;
             color: black;
-            width: 100vw;
+        }
+        
+        .div-flex {
             display: flex;
             align-items: center;
+        }
+        
+        .top-icons {
+            font-size: 23px;
+            margin-right: 13px;
+            cursor: pointer;
+        }
+        
+        input {
+            outline: none;
+            border: none;
+            background: none;
+        }
+        /*--------------------------------------------------- nav left  */
+        
+        .nav {
             justify-content: space-between;
-            gap: 0.5rem;
+            padding: 3px 13px;
+            gap: 3px;
+            width: 100vw;
+            position: sticky;
         }
         
-        .top_icons {
-            font-size: 1.5rem;
-            padding: 0.8rem;
-        }
-        
-        #top_left {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-        
-        #logo_heading {
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            gap: 5px;
-        }
-        
-        #logo {
-            font-size: 3rem;
+        .logo {
             color: red;
+            margin-right: 3px;
+            font-size: 25px;
         }
         
-        #heading_text {
-            padding: 0;
+        nav .heading {
+            font-size: 23px;
+        }
+        /*---------------------------------------------------- nav mid       */
+        
+        .mid-1st-div {
+            background-color: rgb(228, 228, 228);
+            border: solid black 1px;
+            border-radius: 43px;
+        }
+        
+        .mic-div {
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            background: rgb(228, 228, 228);
+            margin-left: 3px;
+            justify-content: center;
+        }
+        
+        .mic-div a .top-icons {
             margin: 0;
         }
         
-        #top_mid {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        .search-input-div {
+            padding-left: 13px;
         }
         
-        #input_search {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            border: 1px solid black;
-            border-radius: 20rem;
-            padding-left: 2rem;
-        }
-        
-        #input_search input {
-            border: none;
-            height: 2rem;
-        }
-        
-        #search_icon_div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 4rem;
-            height: 2rem;
-            background-color: rgb(226, 226, 225);
-            border-top-right-radius: 20rem;
-            border-bottom-right-radius: 20rem;
-        }
-        
-        #mic {
-            display: flex;
-            background-color: rgb(226, 226, 225);
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        #top_right {
-            display: flex;
+        .search-icon-div {
+            border-left: 1px solid black;
+            padding: 3px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Headers/navbar -->
+    <!-- Navbar start  -->
+    <nav class="nav div-flex">
+        <div class="nav-left div-flex">
 
-    <header id="top">
-
-        <!--top left section -->
-        <section id="top_left">
-
-
-            <i class="fa-solid fa-bars top_icons"></i>
-            <div id="logo_heading"> <i id="logo" class="fa-brands fa-youtube "></i>
-                <h3 id="heading_text">Youtube</h3>
+            <div class="nav-left-1st">
+                <a href="#"><i class=" top-icons fa-solid fa-bars"></i></a>
+            </div>
+            <div class="nav-left-2nd div-flex">
+                <a href=""><i class="logo top-icons fa-brands fa-youtube"></i></a>
+                <a href="">
+                    <h3 class="heading">Youtube</h3>
+                </a>
             </div>
 
+        </div>
+        <div class="nav-mid div-flex">
+            <div class="mid-1st-div div-flex">
+                <div class="search-input-div div-flex">
+                    <input type="text" name="search" id="search-box">
 
+                </div>
+                <div class="search-icon-div">
+                    <a href=""><i class="top-icons fa fa-search" aria-hidden="true"></i></a>
 
-        </section>
-
-        <!--top mid section -->
-        <section id="top_mid">
-            <div id="input_search"> <input type="search" name="search" id="search" placeholder="Search">
-                <div id="search_icon_div"><i class="fa-solid fa-magnifying-glass top_icons"></i>
                 </div>
             </div>
-            <div id="mic"><i class="fa-solid fa-microphone top_icons"></i>
+
+
+            <div class="mic-div div-flex">
+                <a href=""><i class="top-icons fa-solid fa-microphone"></i></a>
             </div>
 
-        </section>
-        <!--top right section -->
-        <section id="top_right">
-            <i class="fa-solid fa-video top_icons"></i>
-            <i class="fa-regular fa-bell top_icons"></i>
-            <i class="fa-solid fa-user top_icons"></i>
-        </section>
-    </header>
+        </div>
+        <div class="nav-right div-flex">
+            <a href="">
+                <i class="top-icons fa-solid fa-video"></i>
+
+            </a>
+            <a href="">
+                <i class="top-icons fa-solid fa-bell"></i>
+
+            </a>
+            <a href="">
+
+                <i class="top-icons fa-solid fa-user"></i>
+
+            </a>
+        </div>
+    </nav>
 </body>
-
-
-
 
 </html>
