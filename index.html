@@ -4,35 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube Home Page</title>
-    <!-- adding material icon link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- adding font awesome js link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <!-- adding css file -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- internal css -->
+    <title>Youtube Clone By Ravi Sinhmar</title>
+    <!-- adding google material icons link  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- adding internal css  -->
     <style>
         * {
             padding: 0;
             margin: 0;
-            font-family: sans-serif, serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: white;
         }
         
         a {
             text-decoration: none;
-            color: black;
-        }
-        
-        .div-flex {
-            display: flex;
-            align-items: center;
-        }
-        
-        .top-icons {
-            font-size: 23px;
-            margin-right: 13px;
-            cursor: pointer;
         }
         
         input {
@@ -40,106 +29,121 @@
             border: none;
             background: none;
         }
-        /*--------------------------------------------------- nav left  */
         
-        .nav {
+        .material-icons {
+            color: black;
+            cursor: pointer;
+        }
+        
+        .flex-row {
+            display: flex;
+            flex-direction: row;
             justify-content: space-between;
-            padding: 3px 13px;
-            gap: 3px;
-            width: 100vw;
-            position: sticky;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
+        .yt-heading {
+            font-size: 24px;
+        }
+        
+        #nav {
+            padding: 1px 3px;
+            height: 6vh;
+        }
+        
+        .nav-box {
+            padding: 1px 9px;
+        }
+        
+        #nav .material-icons {
+            margin-right: 13px;
         }
         
         .logo {
-            color: red;
-            margin-right: 3px;
-            font-size: 25px;
+            height: 30px;
         }
         
-        nav .heading {
-            font-size: 23px;
+        .nav-mid {
+            border-radius: 20px;
+            border: 1px solid rgb(96, 96, 96);
         }
-        /*---------------------------------------------------- nav mid       */
+        /* main left section  */
         
-        .mid-1st-div {
-            background-color: rgb(228, 228, 228);
-            border: solid black 1px;
-            border-radius: 43px;
-        }
-        
-        .mic-div {
-            width: 33px;
-            height: 33px;
-            border-radius: 50%;
-            background: rgb(228, 228, 228);
-            margin-left: 3px;
-            justify-content: center;
+        .main-left {
+            justify-content: flex-start;
+            max-width: 33vw;
+            min-width: 8vw;
+            gap: 13px;
+            padding: 30px 12px;
         }
         
-        .mic-div a .top-icons {
-            margin: 0;
+        .all-names,
+        .all-icons {
+            height: 252px;
+            justify-content: space-between;
         }
         
-        .search-input-div {
-            padding-left: 13px;
+        .main-left a {
+            line-height: 24px;
         }
-        
-        .search-icon-div {
-            border-left: 1px solid black;
-            padding: 3px;
-        }
-
-        /* Responsive styles for smaller screens (e.g., phones) */
-        @media only screen and (max-width: 600px) {
-            .nav {
-                flex-wrap: wrap; /* Allow items to wrap onto new lines */
-            }
-          
-            .nav-left-1st,
-            .nav-right {
-                display: none; /* Hide the left and right elements on smaller screens */
-            }
-          
-            .nav-mid {
-                flex-basis: 100%; /* Take full width on smaller screens */
-                margin-bottom: 10px; /* Add some spacing between mid and bottom elements */
-            }
-        }
-
     </style>
 </head>
 
 <body>
-    <!-- Navbar start  -->
-    <nav class="nav div-flex">
-        <div class="nav-left div-flex">
-            <div class="nav-left-1st">
-                <a href="#"><i class=" top-icons fa-solid fa-bars"></i></a>
-            </div>
-            <div class="nav-left-2nd div-flex">
-                <a href=""><i class="logo top-icons fa-brands fa-youtube"></i></a>
-                <a href=""><h3 class="heading">Youtube</h3></a>
-            </div>
-        </div>
-        <div class="nav-mid div-flex">
-            <div class="mid-1st-div div-flex">
-                <div class="search-input-div div-flex">
-                    <input type="text" name="search" id="search-box">
-                </div>
-                <div class="search-icon-div">
-                    <a href=""><i class="top-icons fa fa-search" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="mic-div div-flex">
-                <a href=""><i class="top-icons fa-solid fa-microphone"></i></a>
+
+    <nav id="nav" class="flex-row">
+        <div class="nav-box nav-left flex-row">
+
+            <a href="" class="material-icons"> menu</a>
+
+            <div class="flex-row"> <img class="logo" src="https://png.pngtree.com/png-clipart/20221018/ourmid/pngtree-youtube-social-media-3d-stereo-png-image_6308427.png" alt="Youtube LOGO">
+                <h3 class="yt-heading">Youtube</h3>
             </div>
         </div>
-        <div class="nav-right div-flex">
-            <a href=""><i class="top-icons fa-solid fa-video"></i></a>
-            <a href=""><i class="top-icons fa-solid fa-bell"></i></a>
-            <a href=""><i class="top-icons fa-solid fa-user"></i></a>
+        <div class="nav-box nav-mid flex-row">
+            <input type="text" name="search" placeholder="Search">
+            <a href="" class="material-icons">search</a>
+
+        </div>
+        <div class="nav-box nav-right flex-row">
+            <a href="" class="material-icons"> mic</a>
+            <a href="" class="material-icons">close</a>
+            <a href="" class="material-icons">cancel</a>
         </div>
     </nav>
+    <section id="main">
+        <div class="main-left flex-row">
+            <div class="all-icons flex-column">
+                <a href="" class="material-icons"> home</a>
+                <a href="" class="material-icons">local_fire_department</a>
+                <a href="" class="material-icons">subscriptions</a>
+                <a href="" class="material-icons">thumb_up</a>
+                <a href="" class="material-icons">history</a>
+                <a href="" class="material-icons">playlist_add</a>
+                <a href="" class="material-icons">expand_more</a>
+            </div>
+            <div class="all-names flex-column">
+                <a href="">Home</a>
+                <a href="">Trending</a>
+                <a href="">Subscribed</a>
+                <a href="">Liked</a>
+                <a href="">History</a>
+                <a href="">Playlist</a>
+                <a href="">Show more</a>
+            </div>
+        </div>
+        <div class="main-right flex-column">
+
+        </div>
+    </section>
 </body>
 
 </html>
