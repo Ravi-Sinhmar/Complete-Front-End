@@ -63,7 +63,7 @@
             padding: 1px 9px;
         }
         
-        #nav .material-icons {
+        .material-icons {
             margin-right: 13px;
         }
         
@@ -79,20 +79,135 @@
         
         .main-left {
             justify-content: flex-start;
-            
-            min-width: 140px;
+            min-width: 210px;
             gap: 13px;
             padding: 30px 12px;
         }
         
-        .all-names,
-        .all-icons {
-            height: 252px;
+        .shortcuts .all-names,
+        .shortcuts .all-icons {
+            height: 111px;
+            justify-content: space-between;
+        }
+        
+        .details .all-names,
+        .details .all-icons {
+            height: 146px;
             justify-content: space-between;
         }
         
         .main-left a {
             line-height: 24px;
+        }
+        
+        #main hr {
+            margin-left: 16px;
+            border: 1px solid gray;
+            min-width: 118px;
+        }
+        /* chennals */
+        
+        .chennals .all-names,
+        .chennals .all-icons {
+            height: 146px;
+            justify-content: space-between;
+        }
+        
+        .chennals .all-icons a img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1px solid rgb(255, 1, 1);
+        }
+        
+        .chennals .all-icons a {
+            height: 24px;
+        }
+        
+        #search_icon {
+            display: none;
+        }
+        /* main right grid box section  */
+        
+        .all-items {
+            background-color: red;
+            height: 200px;
+        }
+        
+        @media (max-width:550px) {
+            #input_box_search_icon {
+                display: none;
+            }
+            #search_icon {
+                display: block;
+            }
+            .nav-right .material-icons {
+                margin-right: 5px;
+            }
+        }
+        
+        #main {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .main-right {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 1vw;
+            row-gap: 2vw;
+            width: max-content;
+            padding: 2vw 1vw;
+            width: 94vw;
+            align-content: start;
+        }
+        
+        .all-items {
+            background-image: url("https://lightmv.com/wp-content/uploads/2019/12/video-thumbnail-20191213.jpg");
+            /* background-repeat: no-repeat; */
+            width: 26vw;
+            height: calc(26vw * 9 / 16);
+            border-radius: 9px;
+            width: 100%;
+            /* Set the width of the div */
+            height: 0;
+            /* Set the initial height to 0 */
+            padding-top: 56.25%;
+            /* (9 / 16) * 100% = 56.25% - This creates the 16:9 aspect ratio */
+            background-size: cover;
+            /* Cover the entire div with the background image */
+            background-position: center;
+            /* Center the background image within the div */
+        }
+        
+        @media (max-width:900px) {
+            .main-right {
+                grid-template-columns: 1fr 1fr;
+                width: 98vw;
+            }
+            .main-left-col {
+                display: none;
+            }
+            .all-items {
+                width: 46vw;
+                height: calc(46vw * 9 / 16);
+                border-radius: 3px;
+            }
+        }
+        
+        @media (max-width:550px) {
+            .main-left-col {
+                display: none;
+            }
+            .main-right {
+                grid-template-columns: 1fr;
+                width: 98vw;
+            }
+            .all-items {
+                width: 96vw;
+                height: calc(96vw * 9 / 16);
+                border-radius: 1px;
+            }
         }
     </style>
 </head>
@@ -108,42 +223,90 @@
                 <h3 class="yt-heading">Youtube</h3>
             </div>
         </div>
-        <div class="nav-box nav-mid flex-row">
+        <div id="input_box_search_icon" class="nav-box nav-mid flex-row">
             <input type="text" name="search" placeholder="Search">
             <a href="" class="material-icons">search</a>
-
         </div>
         <div class="nav-box nav-right flex-row">
-            <a href="" class="material-icons"> mic</a>
-            <a href="" class="material-icons">close</a>
-            <a href="" class="material-icons">cancel</a>
+            <a id="search_icon" href="" class="material-icons">search</a>
+            <a href="" class="material-icons"> video_call</a>
+            <a href="" class="material-icons">notifications</a>
+            <a href="" class="material-icons">person</a>
         </div>
     </nav>
     <section id="main">
-        <div class="main-left flex-row">
-            <div class="all-icons flex-column">
-                <a href="" class="material-icons"> home</a>
-                <a href="" class="material-icons">local_fire_department</a>
-                <a href="" class="material-icons">subscriptions</a>
-                <a href="" class="material-icons">thumb_up</a>
-                <a href="" class="material-icons">history</a>
-                <a href="" class="material-icons">playlist_add</a>
-                <a href="" class="material-icons">expand_more</a>
+        <div class="flex-column main-left-col">
+            <div class="shortcuts main-left flex-row">
+                <div class="all-icons flex-column">
+                    <a href="" class="material-icons"> home</a>
+                    <a href="" class="material-icons">local_fire_department</a>
+                    <a href="" class="material-icons">subscriptions</a>
+
+                </div>
+                <div class="all-names flex-column">
+                    <a href="">Home</a>
+                    <a href="">Trending</a>
+                    <a href="">Subscribed</a>
+
+                </div>
             </div>
-            <div class="all-names flex-column">
-                <a href="">Home</a>
-                <a href="">Trending</a>
-                <a href="">Subscribed</a>
-                <a href="">Liked</a>
-                <a href="">History</a>
-                <a href="">Playlist</a>
-                <a href="">Show more</a>
+            <hr>
+            <div class="details main-left flex-row">
+                <div class="all-icons flex-column">
+
+                    <a href="" class="material-icons">thumb_up</a>
+                    <a href="" class="material-icons">history</a>
+                    <a href="" class="material-icons">playlist_add</a>
+                    <a href="" class="material-icons">expand_more</a>
+                </div>
+                <div class="all-names flex-column">
+
+                    <a href="">Liked</a>
+                    <a href="">History</a>
+                    <a href="">Playlist</a>
+                    <a href="">Show more</a>
+                </div>
+            </div>
+            <hr>
+            <div class="chennals main-left flex-row">
+                <div class="all-icons flex-column">
+                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
+                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
+                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
+                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
+
+                </div>
+                <div class="all-names flex-column">
+                    <a href="">Prakhar Gupta</a>
+                    <a href="">PG Radio</a>
+                    <a href="">Prakhar k Parvachan</a>
+                    <a href="">Sher Sutra</a>
+                </div>
             </div>
         </div>
-        <div class="main-right flex-column">
+        <div class="main-right">
+            <div class="all-items gird-item-1"></div>
+            <div class="all-items gird-item-2"></div>
+            <div class="all-items gird-item-3"></div>
+            <div class="all-items gird-item-1"></div>
+            <div class="all-items gird-item-2"></div>
+            <div class="all-items gird-item-3"></div>
+            <div class="all-items gird-item-1"></div>
+            <div class="all-items gird-item-2"></div>
+            <div class="all-items gird-item-3"></div>
+            <div class="all-items gird-item-1"></div>
+            <div class="all-items gird-item-2"></div>
+            <div class="all-items gird-item-3"></div>
+            <div class="all-items gird-item-1"></div>
+            <div class="all-items gird-item-2"></div>
+            <div class="all-items gird-item-3"></div>
+            <div class="all-items gird-item-1"></div>
+            <div class="all-items gird-item-2"></div>
+            <div class="all-items gird-item-3"></div>
 
         </div>
     </section>
+
 </body>
 
 </html>
