@@ -4,24 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube Clone By Ravi Sinhmar</title>
-    <!-- adding google material icons link  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Our Tube</title>
 
-    <!-- adding internal css  -->
+    <!-- adding material-icon link here  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- adding internal css here  -->
     <style>
+        /* General css properties */
+        
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-        }
-        
-        body {
-            background-color: white;
-        }
-        
-        a {
-            text-decoration: none;
         }
         
         input {
@@ -30,15 +25,15 @@
             background: none;
         }
         
-        .material-icons {
+        a {
+            text-decoration: none;
             color: black;
-            cursor: pointer;
         }
+        /* Most common properties we are going to use in our page  */
         
         .flex-row {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
@@ -46,167 +41,77 @@
         .flex-column {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        /* navbar start here  */
+        
+        .navbar {
+            color: black;
+            height: 40px;
+            box-shadow: 0 -1px 7px black;
+            justify-content: space-between;
+            padding: 4px 4px;
+        }
+        
+        .nav-left {
             justify-content: flex-start;
-            align-items: flex-start;
-        }
-        
-        .yt-heading {
-            font-size: 24px;
-        }
-        
-        #nav {
-            padding: 1px 3px;
-            height: 6vh;
-        }
-        
-        .nav-box {
-            padding: 1px 9px;
+            gap: 4px;
         }
         
         .material-icons {
-            margin-right: 13px;
+            font-size: 28px;
+            color: black;
         }
         
-        .logo {
-            height: 30px;
+        .nav-left a {
+            height: 28px;
+        }
+        
+        .nav-left a img {
+            height: 28px;
+        }
+        
+        .nav-left a .heading {
+            font-size: 28px;
+            line-height: 28px;
+        }
+        
+        .nav-mid button {
+            width: 34px;
+            height: 26px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            border: none;
+            cursor: pointer;
         }
         
         .nav-mid {
-            border-radius: 20px;
-            border: 1px solid rgb(96, 96, 96);
-        }
-        /* main left section  */
-        
-        .main-left {
-            justify-content: flex-start;
-            min-width: 210px;
-            gap: 13px;
-            padding: 30px 12px;
-        }
-        
-        .shortcuts .all-names,
-        .shortcuts .all-icons {
-            height: 111px;
-            justify-content: space-between;
-        }
-        
-        .details .all-names,
-        .details .all-icons {
-            height: 146px;
-            justify-content: space-between;
-        }
-        
-        .main-left a {
-            line-height: 24px;
-        }
-        
-        #main hr {
-            margin-left: 16px;
             border: 1px solid gray;
-            min-width: 118px;
-        }
-        /* chennals */
-        
-        .chennals .all-names,
-        .chennals .all-icons {
-            height: 146px;
-            justify-content: space-between;
+            border-radius: 20px;
+            height: 28px;
+            justify-content: center;
         }
         
-        .chennals .all-icons a img {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            border: 1px solid rgb(255, 1, 1);
+        .nav-mid input {
+            margin: 1px 9px;
         }
         
-        .chennals .all-icons a {
-            height: 24px;
+        .nav-right {
+            justify-content: flex-end;
+            gap: 4px;
         }
         
-        #search_icon {
+        .nav-right .search-icon {
             display: none;
         }
-        /* main right grid box section  */
-        
-        .all-items {
-            background-color: red;
-            height: 200px;
-        }
         
         @media (max-width:550px) {
-            #input_box_search_icon {
+            .nav-mid {
                 display: none;
             }
-            #search_icon {
+            .nav-right .search-icon {
                 display: block;
-            }
-            .nav-right .material-icons {
-                margin-right: 5px;
-            }
-        }
-        
-        #main {
-            display: flex;
-            flex-direction: row;
-        }
-        
-        .main-right {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            column-gap: 1vw;
-            row-gap: 2vw;
-            width: max-content;
-            padding: 2vw 1vw;
-            width: 94vw;
-            align-content: start;
-        }
-        
-        .all-items {
-            background-image: url("https://lightmv.com/wp-content/uploads/2019/12/video-thumbnail-20191213.jpg");
-            /* background-repeat: no-repeat; */
-            width: 26vw;
-            height: calc(26vw * 9 / 16);
-            border-radius: 9px;
-            width: 100%;
-            /* Set the width of the div */
-            height: 0;
-            /* Set the initial height to 0 */
-            padding-top: 56.25%;
-            /* (9 / 16) * 100% = 56.25% - This creates the 16:9 aspect ratio */
-            background-size: cover;
-            /* Cover the entire div with the background image */
-            background-position: center;
-            /* Center the background image within the div */
-        }
-        
-        @media (max-width:900px) {
-            .main-right {
-                grid-template-columns: 1fr 1fr;
-                width: 98vw;
-            }
-            .main-left-col {
-                display: none;
-            }
-            .all-items {
-                width: 46vw;
-                height: calc(46vw * 9 / 16);
-                border-radius: 3px;
-            }
-        }
-        
-        @media (max-width:550px) {
-            .main-left-col {
-                display: none;
-            }
-            .main-right {
-                grid-template-columns: 1fr;
-                width: 98vw;
-            }
-            .all-items {
-                width: 96vw;
-                height: calc(96vw * 9 / 16);
-                border-radius: 1px;
             }
         }
     </style>
@@ -214,98 +119,30 @@
 
 <body>
 
-    <nav id="nav" class="flex-row">
-        <div class="nav-box nav-left flex-row">
-
-            <a href="" class="material-icons"> menu</a>
-
-            <div class="flex-row"> <img class="logo" src="https://png.pngtree.com/png-clipart/20221018/ourmid/pngtree-youtube-social-media-3d-stereo-png-image_6308427.png" alt="Youtube LOGO">
-                <h3 class="yt-heading">Youtube</h3>
-            </div>
+    <navbar class="navbar flex-row">
+        <div class="nav-left flex-row">
+            <a href="" class="material-icons">menu </a>
+            <a href=""><img src="images/logo.png" alt="" class="logo"></a>
+            <a href="">
+                <h3 class="heading">OurTube</h3>
+            </a>
         </div>
-        <div id="input_box_search_icon" class="nav-box nav-mid flex-row">
-            <input type="text" name="search" placeholder="Search">
-            <a href="" class="material-icons">search</a>
+
+
+        <div class="nav-mid flex-row">
+            <input type="text" class="search_box">
+            <button type="button" class="material-icons">search</button>
         </div>
-        <div class="nav-box nav-right flex-row">
-            <a id="search_icon" href="" class="material-icons">search</a>
-            <a href="" class="material-icons"> video_call</a>
+
+
+        <div class="nav-right flex-row">
+            <a href="" class="material-icons search-icon">search</a>
+            <a href="" class="material-icons"> movie_edit</a>
             <a href="" class="material-icons">notifications</a>
             <a href="" class="material-icons">person</a>
-        </div>
-    </nav>
-    <section id="main">
-        <div class="flex-column main-left-col">
-            <div class="shortcuts main-left flex-row">
-                <div class="all-icons flex-column">
-                    <a href="" class="material-icons"> home</a>
-                    <a href="" class="material-icons">local_fire_department</a>
-                    <a href="" class="material-icons">subscriptions</a>
-
-                </div>
-                <div class="all-names flex-column">
-                    <a href="">Home</a>
-                    <a href="">Trending</a>
-                    <a href="">Subscribed</a>
-
-                </div>
-            </div>
-            <hr>
-            <div class="details main-left flex-row">
-                <div class="all-icons flex-column">
-
-                    <a href="" class="material-icons">thumb_up</a>
-                    <a href="" class="material-icons">history</a>
-                    <a href="" class="material-icons">playlist_add</a>
-                    <a href="" class="material-icons">expand_more</a>
-                </div>
-                <div class="all-names flex-column">
-
-                    <a href="">Liked</a>
-                    <a href="">History</a>
-                    <a href="">Playlist</a>
-                    <a href="">Show more</a>
-                </div>
-            </div>
-            <hr>
-            <div class="chennals main-left flex-row">
-                <div class="all-icons flex-column">
-                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
-                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
-                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
-                    <a href=""><img src="https://yt3.googleusercontent.com/s2T62ZXxtpV6N5zk86U4qJTS8jy8TJRaSLAnMOEiUJhIA7KT47lll5YO5NDh9nT0A87GWV-fnbE=s900-c-k-c0x00ffffff-no-rj" alt=""></a>
-
-                </div>
-                <div class="all-names flex-column">
-                    <a href="">Prakhar Gupta</a>
-                    <a href="">PG Radio</a>
-                    <a href="">Prakhar k Parvachan</a>
-                    <a href="">Sher Sutra</a>
-                </div>
-            </div>
-        </div>
-        <div class="main-right">
-            <div class="all-items gird-item-1"></div>
-            <div class="all-items gird-item-2"></div>
-            <div class="all-items gird-item-3"></div>
-            <div class="all-items gird-item-1"></div>
-            <div class="all-items gird-item-2"></div>
-            <div class="all-items gird-item-3"></div>
-            <div class="all-items gird-item-1"></div>
-            <div class="all-items gird-item-2"></div>
-            <div class="all-items gird-item-3"></div>
-            <div class="all-items gird-item-1"></div>
-            <div class="all-items gird-item-2"></div>
-            <div class="all-items gird-item-3"></div>
-            <div class="all-items gird-item-1"></div>
-            <div class="all-items gird-item-2"></div>
-            <div class="all-items gird-item-3"></div>
-            <div class="all-items gird-item-1"></div>
-            <div class="all-items gird-item-2"></div>
-            <div class="all-items gird-item-3"></div>
 
         </div>
-    </section>
+    </navbar>
 
 </body>
 
